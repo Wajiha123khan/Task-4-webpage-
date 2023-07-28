@@ -1,0 +1,185 @@
+*{
+	margin: 0;
+	padding:0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+body{
+	font-family: montserrat;
+
+}
+nav{
+	background: #fff;
+	height: 80px;
+	width: 100%;
+}
+label.logo{
+    color:green;
+    font-size:35px;
+    line-height: 80px;
+    padding:0 100px;
+    font-weight: bold;
+}
+nav ul{
+	float: right;
+	margin-right: 5px;
+
+
+}
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+    
+}
+nav ul li a{
+	color: black;
+	font-size: 17px;
+	text-transform: uppercase;
+}
+button{
+    border: 2px solid green;
+    background: white;
+    padding: 7px 20px;
+    color: green;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+    border-radius: 10px;
+   
+}
+ nav ul li a.active{
+    color: green
+
+}
+.checkbtn{
+	font-size: 30px;
+	color: green;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+#check{
+	display: none;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    min-height: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end ;
+     gap: 20px;
+
+
+ }
+   section .slider::after{
+   
+        content: '';
+        position: absolute;
+        width: 55.6%;
+        padding: 21.7%;
+        padding-left: 24.5%;
+        top: 0;
+        left: 0;
+        background-color: rgba(87, 146, 118, 0.55);
+     
+ }
+ 
+ section{
+    background: url(b1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+ }
+ .columns{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px 0;
+    height: 10px;
+
+ }
+ .column{
+    flex: 1;
+    border: 1px solid #fff;
+    margin: 2px;
+    padding: 10px;
+    background:#fff;
+    transition: 0.3s;
+ }
+ .column i{
+    font-size: 30px;
+    color: green;
+    margin: 20px;
+   
+ }
+
+
+ @media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+
+    }
+    nav ul li a{
+        font-size: 16px; 
+
+    }
+
+}
+@media (max-width: 952px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 70vh;
+        background-color:#D3E25C;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        border-radius: 50px;
+    }
+    nav ul li{
+        display: block;
+        margin:50px 0;
+        line-height: 30px;
+
+    }
+    nav ul li a{
+        font-size: 20px;
+        color: green;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+     section .slider::after{
+         content: '';
+        position: absolute;
+        width: 1%;
+       
+        padding-left: 24.5%;
+        top: 0;
+        left: 0;
+     
+        padding: 66.7%;
+ }
+ 
+
+ .column{
+    flex: 1;
+   
+    margin: 2px;
+    padding: 10px;
+    background:grey;
+    transition: 0.3s;
+    border: 5px dotted red;
+
+ }
+}
